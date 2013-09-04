@@ -1,8 +1,10 @@
 # TiSliderMenu
 
-## This is a small widget to handle the Slide Menu like Facebook or many apps
+This is a small Titanium Alloy widget to handle the Slide Menu like Facebook or many apps.
 
 Is based on the [Alloy Slide Menu][1] example by Daniel Sefton, he offer both slide mode (left and right) and some functionality, I didn't need everything so I made a small version of the same widget.
+
+Also I'm adding support to handle the navigation internaly in the widget so no need of extra elements or widgets to handle the open/close views
 
 ## Doing
 1. Slide to the left
