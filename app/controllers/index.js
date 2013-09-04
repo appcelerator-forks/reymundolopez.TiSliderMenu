@@ -1,10 +1,10 @@
 
-var widget = Alloy.createWidget("com.reymundolopez.tislidermenu", { win : $.Win });
+Alloy.Globals.Slider = Alloy.createWidget("com.reymundolopez.tislidermenu", { win : $.Win });
 
 var menu = Alloy.createController("menu").getView();
 var content = Alloy.createController("main").getView();
 
-widget.addMenu(menu);
-widget.addContent(content);
+Alloy.Globals.Slider.addMenu(menu);
+Alloy.Globals.Slider.addContent(content);
 
 $.Win.open();

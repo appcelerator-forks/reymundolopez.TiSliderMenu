@@ -1,4 +1,5 @@
 var params = arguments[0] || {};
+var nav = require(WPATH("nav"));
 
 var win = params.win;
 
@@ -6,7 +7,6 @@ var win = params.win;
 if(win){
 	win.add($.Wrapper);
 }
-
 
 var duration = 150;
 var isOpen = false;
@@ -23,13 +23,14 @@ var resetAnimation = Ti.UI.createAnimation({
 	duration : duration
 });
 
+nav.setMainContainer($.ContentView);
+
 
 $.LeftButton.addEventListener("click", function(e){
 	$.toggle();
 });
 
 exports.toggle = function(e){
-	// $.LeftButton.enabled = false;
 	if(!isOpen){
 		$.MovableView.animate(animation);
 	}else{
@@ -53,3 +54,8 @@ exports.addContent = function(view){
 	var view = view || Ti.UI.createView();
 	$.ContentView.add(view);
 };
+
+exports.openView = function(view){
+	var view = view || Ti.UI.createView();
+	nav.open({view : view});
+}
