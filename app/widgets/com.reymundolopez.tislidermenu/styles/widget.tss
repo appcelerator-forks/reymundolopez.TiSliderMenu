@@ -1,0 +1,43 @@
+"#Wrapper" : {
+	width : Ti.Platform.displayCaps.platformWidth,
+	height : Ti.UI.FILL
+},
+"#MenuView" : {
+	top : 0,
+	left : 0,
+	width : 250,
+	zIndex : 100
+},
+"#MovableView" : {
+	left : 0,
+	width : Ti.Platform.displayCaps.platformWidth,
+	zIndex : 200
+},
+"#NavToolbar" : {
+	top : 0,
+	left : 0,
+	width : Ti.Platform.displayCaps.platformWidth,
+	height : 45,
+	backgroundColor : "gray"
+},
+"#LeftButton" : {
+	top : 0,
+	left : 0,
+	backgroundColor : "red",
+	width : 60,
+	height : 45
+},
+"#LeftButton[platform=ios]" : {
+	style : Ti.UI.iPhone.SystemButtonStyle.PLAIN
+},
+"#Title" : {
+	top : 5,
+	text : "Hello World"
+},
+"#ContentView" : {
+	left : 0,
+	top : 45,
+	width : Ti.Platform.displayCaps.platformWidth,
+	height : Ti.UI.FILL,
+	backgroundColor : "white"
+}

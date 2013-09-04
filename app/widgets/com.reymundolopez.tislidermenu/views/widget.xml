@@ -1,0 +1,13 @@
+<Alloy>
+	<View id="Wrapper">
+		<View id="MenuView" />
+		
+		<View id="MovableView">
+			<View id="NavToolbar">
+				<Button id="LeftButton" />
+				<Label id="Title" />
+			</View>
+			<View id="ContentView" />
+		</View>
+	</View>
+</Alloy>
