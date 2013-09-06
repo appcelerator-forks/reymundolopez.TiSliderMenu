@@ -7,7 +7,7 @@ Is based on the [Alloy Slide Menu][1] example by Daniel Sefton, he offer both sl
 Also I'm adding support to handle the navigation internaly in the widget so no need of extra elements or widgets to handle the open/close views
 
 ## Done
-1. Slide to the left
+1. Slide to the right
 4. Encapsulate all the slide logic inside of the widget
 5. Use the widget in the Views or Controllers
 6. Support open new views
