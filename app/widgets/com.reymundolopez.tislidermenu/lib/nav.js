@@ -6,6 +6,19 @@ exports.open = function(params){
 	var params = params || {};
 	var view = params.view;
 
+	if(views.length > 0){
+		var currentV = exports.currentView();
+		mainContainer.remove(currentV);
+		views = [];
+	}
+	mainContainer.add(view);
+	views.push(view);
+};
+
+exports.openDetail = function(params){
+	var params = params || {};
+	var view = params.view;
+
 	
 	if(views.length > 0){
 		var currentV = exports.currentView();
@@ -47,9 +60,5 @@ exports.setMainContainer = function(container){
 };
 
 exports.isLastView = function(){
-	if(views.length > 1){
-		return false;
-	}else{
-		return true;
-	}
+	return (views.length <= 1);
 }
