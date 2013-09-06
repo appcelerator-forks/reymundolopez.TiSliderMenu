@@ -1,5 +1,8 @@
 <Alloy>
 	<View id="Wrapper">
-		<Label>Menu</Label>
+		<TableView id="table">
+			<TableViewRow title="Main" tag="main" />
+			<TableViewRow title="New View" tag="newVie" />
+		</TableView>
 	</View>
 </Alloy>

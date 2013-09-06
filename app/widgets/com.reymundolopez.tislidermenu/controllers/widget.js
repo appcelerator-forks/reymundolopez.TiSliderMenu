@@ -62,7 +62,11 @@ $.addContent = function(view){
 
 $.openView = function(view){
 	var view = view || Ti.UI.createView();
+
 	nav.open({view : view});
+	if(isOpen){
+		$.toggle();
+	}
 };
 
 $.openDetail = function(view){
