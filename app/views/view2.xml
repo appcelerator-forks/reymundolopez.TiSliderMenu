@@ -1,5 +1,5 @@
 <Alloy>
 	<View id="Wrapper">
-		<Label onClick="openView">Main</Label>
+		<Label onClick="backToMain">View 2</Label>
 	</View>
 </Alloy>

@@ -27,10 +27,15 @@ nav.setMainContainer($.ContentView);
 
 
 $.LeftButton.addEventListener("click", function(e){
-	$.toggle();
+	if(nav.isLastView()){
+		$.toggle();
+	}else{
+		nav.back();
+	}
+		
 });
 
-exports.toggle = function(e){
+$.toggle = function(e){
 	if(!isOpen){
 		$.MovableView.animate(animation);
 	}else{
@@ -40,22 +45,26 @@ exports.toggle = function(e){
 	isOpen = !isOpen;
 };
 
-exports.setTitle = function(title){
+$.setTitle = function(title){
 	var title = title || "";
 	$.Title.text = title;
 };
 
-exports.addMenu = function(view){
+$.addMenu = function(view){
 	var view = view || Ti.UI.createView();
 	$.MenuView.add(view);
 };
 
-exports.addContent = function(view){
+$.addContent = function(view){
 	var view = view || Ti.UI.createView();
-	$.ContentView.add(view);
+	nav.open({view : view});
 };
 
-exports.openView = function(view){
+$.openView = function(view){
 	var view = view || Ti.UI.createView();
 	nav.open({view : view});
+}
+
+$.backView = function(){
+	nav.back();
 }

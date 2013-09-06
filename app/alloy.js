@@ -12,3 +12,7 @@
 
 
 Alloy.Globals.Slider = null;
+
+this.log = function(message){
+	Ti.API.info(message);
+};
